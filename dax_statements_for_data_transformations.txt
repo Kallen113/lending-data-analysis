@@ -1,0 +1,11 @@
+// create loan_performance_categories column denoting loans as being of "Good" or "Bad" performance by using SWITCH() statement to collapse the various loan_status categories into the 2 desired  categories (for more easily comparable Good vs Bad categories)
+loan_performance_categories = SWITCH(
+    TRUE,
+    [loan_status] = "Current", "Good",
+    [loan_status] = "Fully paid", "Good",
+    [loan_status] = "In Grace Period", "Bad",
+    [loan_status] = "Late (16-30 days)", "Bad",
+    [loan_status] = "Late (31-120 days)", "Bad",
+    [loan_status] = "Charged off", "Bad",
+    "Null"
+)
