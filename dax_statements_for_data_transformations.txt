@@ -6,6 +6,7 @@ loan_performance_categories = SWITCH(
     [loan_status] = "In Grace Period", "Bad",
     [loan_status] = "Late (16-30 days)", "Bad",
     [loan_status] = "Late (31-120 days)", "Bad",
+    [loan_status] = "Default", "Bad",
     [loan_status] = "Charged off", "Bad",
     "Null"
 )
