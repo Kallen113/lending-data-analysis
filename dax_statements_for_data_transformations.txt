@@ -10,3 +10,6 @@ loan_performance_categories = SWITCH(
     [loan_status] = "Charged off", "Bad",
     "Null"
 )
+
+// calculate loans counts by Lending Club's assigned letter grade system
+grade_counts = COUNT('approved_data_2016_2018'[grade])
